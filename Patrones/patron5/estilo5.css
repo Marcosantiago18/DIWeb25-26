@@ -1,0 +1,77 @@
+/* Mobile First Styles */
+.columna1 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 250px;
+  height: 100vh;
+  background-color: #ddd;
+  /* Visible background */
+  z-index: 10;
+
+  -webkit-transform: translate(-250px, 0);
+  transform: translate(-250px, 0);
+
+  -webkit-transition: -webkit-transform 0.3s ease-out;
+  transition: transform 0.3s ease-out;
+}
+
+.columna1.open {
+  -webkit-transform: translate(0, 0);
+  transform: translate(0, 0);
+}
+
+.columna2 {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background-color: #fff;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.menu-btn {
+  position: fixed;
+  /* Fixed so it stays visible if scrolled, or absolute */
+  top: 10px;
+  left: 10px;
+  font-size: 30px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  z-index: 20;
+  /* Above menu */
+}
+
+/* Desktop Styles */
+@media (min-width: 600px) {
+  .menu-btn {
+    display: none;
+  }
+
+  .container {
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-flow: row nowrap;
+    flex-flow: row nowrap;
+    height: 100vh;
+  }
+
+  .columna1 {
+    /* Reset absolute positioning for flex layout */
+    position: relative;
+    -webkit-transform: translate(0, 0);
+    transform: translate(0, 0);
+    /* Flex behavior */
+    -webkit-flex: 0 0 250px;
+    flex: 0 0 250px;
+  }
+
+  .columna2 {
+    /* Takes remaining space */
+    -webkit-flex: 1;
+    flex: 1;
+    width: auto;
+    /* Reset width 100% */
+  }
+}

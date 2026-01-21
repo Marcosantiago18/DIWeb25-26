@@ -1,0 +1,172 @@
+/* variables */
+:root {
+  --main-white-color: white;
+  --main-black-color: black;
+  --main-purple-color: #9e89b8;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+}
+
+ul {
+  list-style: none;
+  /* Removes bullets */
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.wrapper>* {
+  padding: 20px;
+}
+
+/* Header */
+.page-header nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+/* Navigation Menu */
+.page-header ul {
+  display: flex;
+  gap: 20px;
+  /* Spacing between menu items */
+  margin: 0 20px;
+}
+
+.page-header ul li a {
+  color: var(--main-black-color);
+  font-size: 1rem;
+}
+
+/* CTA Button */
+.cta-contact {
+  padding: 10px 20px;
+  border: 1px solid var(--main-black-color);
+  background: transparent;
+  cursor: pointer;
+  font-weight: bold;
+  text-transform: capitalize;
+  font-family: inherit;
+}
+
+/* Main Content */
+.page-main {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 450px;
+  background: var(--main-purple-color) url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/162656/city.jpg) no-repeat center / cover;
+  background-blend-mode: multiply;
+  color: var(--main-white-color);
+  padding: 50px;
+}
+
+.page-main div {
+  max-width: 600px;
+}
+
+.page-main h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+.page-main p {
+  font-size: 1.1rem;
+  line-height: 1.5;
+  margin-bottom: 15px;
+}
+
+/* Footer */
+.page-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: var(--main-white-color);
+}
+
+.page-footer small {
+  color: #666;
+}
+
+.page-footer ul {
+  display: flex;
+  gap: 15px;
+  /* Spacing between social icons */
+}
+
+.page-footer ul li a {
+  color: var(--main-black-color);
+  font-size: 1.2rem;
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 768px) {
+  .page-header nav {
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+  }
+
+  .page-header ul {
+    flex-direction: column;
+    width: 100%;
+    margin: 15px 0;
+    gap: 10px;
+    text-align: center;
+  }
+
+  .cta-contact {
+    width: 100%;
+    max-width: 200px;
+  }
+
+  .page-main {
+    padding: 30px;
+    text-align: center;
+  }
+
+  .page-main div {
+    margin: 0 auto;
+  }
+
+  .page-footer {
+    flex-direction: column;
+    gap: 15px;
+    text-align: center;
+  }
+}
+
+@media screen and (min-width: 769px) {
+  .page-main {
+    padding-left: 90px;
+  }
+}

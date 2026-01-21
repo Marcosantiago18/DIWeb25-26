@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Off Canvas</title>
+  <link rel="stylesheet" href="estilo5.css" />
+</head>
+
+<body>
+  <button id="menu-toggle" class="menu-btn">☰</button>
+  <nav>Navbar</nav>
+  <div class="container">
+    <section class="columna1">
+      <div>Sección 1</div>
+      <div>Sección 2</div>
+    </section>
+    <section class="columna2">
+      <h1>Contenido Principal</h1>
+      <p>Este es el contenido de la página.</p>
+    </section>
+  </div>
+  <script>
+    const btn = document.getElementById('menu-toggle');
+    const menu = document.querySelector('.columna1');
+    btn.addEventListener('click', () => {
+      menu.classList.toggle('open');
+    });
+  </script>
+</body>
+
+</html>

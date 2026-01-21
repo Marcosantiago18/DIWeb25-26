@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Tienda online FSCF - Explora nuestra colección de libros de ciencia ficción y fantasía">
+    <title>FSCF - Mi Librería | Tienda Online</title>
+
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Roboto:wght@300;400;500;700&display=swap"
+        rel="stylesheet">
+
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    
+    <header>
+        <div class="header-content">
+            <h1 class="logo">FSCF</h1>
+            <div class="user-icon">
+                <i class="fas fa-user-circle"></i>
+            </div>
+        </div>
+    </header>
+
+    
+    <nav>
+        <div class="nav-content">
+            
+            <form class="search-form" role="search">
+                <i class="fas fa-search"></i>
+                <input type="search" placeholder="Buscar..." aria-label="Buscar libros">
+            </form>
+
+            
+            <ul class="nav-menu">
+                <li><a href="index.html">Tu librería</a></li>
+                <li><a href="tienda.html" class="active">Compra on-line</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    
+    <main class="shop-main">
+        
+        <aside class="categories-sidebar">
+            <h2 class="sidebar-title">Filtrar por:</h2>
+            <form class="filter-form">
+                <div class="filter-group">
+                    <label class="filter-option">
+                        <input type="checkbox" name="category" value="all" checked>
+                        <span class="filter-label highlight">Todos los productos</span>
+                    </label>
+                    <label class="filter-option">
+                        <input type="checkbox" name="category" value="libros">
+                        <span class="filter-label">Libros</span>
+                    </label>
+                    <label class="filter-option">
+                        <input type="checkbox" name="category" value="tazas">
+                        <span class="filter-label">Tazas</span>
+                    </label>
+                    <label class="filter-option">
+                        <input type="checkbox" name="category" value="bolsas">
+                        <span class="filter-label">Bolsas</span>
+                    </label>
+                </div>
+            </form>
+        </aside>
+
+        
+        <section class="shop-products">
+            <div class="shop-products-grid">
+                
+                <article class="shop-product-card">
+                    <div class="product-image-wrapper">
+                        <img src="images/sinopsis-cuantica.jpg" alt="Sinopsis Cuántica">
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-name">Sinopsis cuántica</h3>
+                        <p class="product-description">
+                            Conciencias a través de redes neuronales cuánticas, donde los pensamientos se vuelven en
+                            realidades alternativas.
+                        </p>
+                        <button class="add-to-cart">Añadir al carrito</button>
+                    </div>
+                </article>
+
+                
+                <article class="shop-product-card">
+                    <div class="product-image-wrapper">
+                        <span class="discount-badge">-30%</span>
+                        <img src="images/jardines-neon.jpg" alt="Los jardines de neón">
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-name">Los jardines de neón</h3>
+                        <p class="product-description">
+                            Planetas que respiran luz y color, donde las plantas son organismos conscientes.
+                        </p>
+                        <p class="product-price">
+                            <span class="original-price">30.00€</span>
+                            <span class="sale-price">21.00€</span>
+                        </p>
+                        <button class="add-to-cart">Añadir al carrito</button>
+                    </div>
+                </article>
+
+                
+                <article class="shop-product-card">
+                    <div class="product-image-wrapper">
+                        <img src="images/partitura-vacio.jpg" alt="Partitura del Vacío">
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-name">Partitura del Vacío</h3>
+                        <p class="product-description">
+                            Melodía en la inmensa oscuridad, una civilización que aprende a componer "Partitura del
+                            Vacío".
+                        </p>
+                        <button class="add-to-cart">Añadir al carrito</button>
+                    </div>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <!-- Column 1: Links -->
+            <div class="footer-column">
+                <ul class="footer-links">
+                    <li><a href="#"><i class="fab fa-facebook"></i></a></li>
+                    <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                    <li><a href="#"><i class="fab fa-youtube"></i></a></li>
+                </ul>
+            </div>
+
+            <!-- Column 2: Copyright -->
+            <div class="footer-column">
+                <p>Política de datos - Cookies</p>
+            </div>
+
+            <!-- Column 3: Social Media -->
+            <div class="footer-column">
+                <p>Marco Santiago Gil</p>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
