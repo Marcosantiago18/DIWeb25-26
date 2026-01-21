@@ -1,5 +1,3 @@
-
-
 * {
     margin: 0;
     padding: 0;
@@ -47,8 +45,6 @@ header {
 .user-icon:hover {
     transform: scale(1.1);
 }
-
-
 
 nav {
     background: linear-gradient(135deg, #5DADE2 0%, #85C1E9 100%);
@@ -126,8 +122,6 @@ main {
     margin: 2rem auto;
     padding: 0 2rem;
 }
-
-
 
 .hero-section {
     background: linear-gradient(135deg, rgba(173, 216, 230, 0.9) 0%, rgba(135, 206, 235, 0.9) 100%);
@@ -688,60 +682,536 @@ footer {
     font-weight: 500;
 }
 
+/* ===================================
+   RESPONSIVE DESIGN - MEDIA QUERIES
+   =================================== */
 
+/* Large Tablets & Small Desktops (1200px and below) */
 @media (max-width: 1200px) {
+    .header-content {
+        padding: 0 1rem;
+    }
+
+    .logo {
+        font-size: 2rem;
+    }
+
+    .user-icon {
+        font-size: 1.75rem;
+    }
+
+    nav {
+        padding: 1rem 1.5rem;
+    }
+
     .products-grid {
         grid-template-columns: repeat(3, 1fr);
+        gap: 1.5rem;
+    }
+
+    .books-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
     }
 
     .shop-products-grid {
         grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
+    }
+
+    .products-section-with-sidebar {
+        grid-template-columns: 70% 30%;
+    }
+
+    main {
+        padding: 0 1.5rem;
     }
 }
 
+/* Tablets (992px and below) */
+@media (max-width: 992px) {
+    .logo {
+        font-size: 1.75rem;
+    }
+
+    .nav-content {
+        gap: 1rem;
+    }
+
+    .search-form {
+        flex: 0 0 250px;
+    }
+
+    .nav-menu {
+        gap: 0.5rem;
+    }
+
+    .nav-menu a {
+        padding: 0.6rem 1rem;
+        font-size: 0.9rem;
+    }
+
+    .hero-section {
+        padding: 2rem;
+    }
+
+    .hero-title {
+        font-size: 2.5rem;
+    }
+
+    .hero-description {
+        font-size: 1rem;
+    }
+
+    .section-subtitle {
+        font-size: 1.5rem;
+    }
+
+    .featured-books {
+        gap: 1.5rem;
+    }
+
+    .featured-book {
+        width: 120px;
+        height: 120px;
+    }
+
+    .products-section-with-sidebar {
+        grid-template-columns: 65% 35%;
+        gap: 1.5rem;
+    }
+
+    .books-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .shop-main {
+        grid-template-columns: 30% 70%;
+        gap: 1.5rem;
+    }
+
+    .categories-sidebar {
+        padding: 1.5rem;
+    }
+
+    .sidebar-title {
+        font-size: 1.3rem;
+    }
+}
+
+/* Small Tablets & Large Phones (768px and below) */
 @media (max-width: 768px) {
+    header {
+        padding: 1rem 1.5rem;
+    }
+
+    .logo {
+        font-size: 1.5rem;
+    }
+
+    .user-icon {
+        font-size: 1.5rem;
+    }
+
+    nav {
+        padding: 1rem;
+        border-radius: 25px;
+    }
+
     .nav-content {
         flex-direction: column;
+        gap: 1rem;
     }
 
     .search-form {
         flex: 1;
         width: 100%;
+        max-width: 100%;
     }
 
-    .products-grid {
-        grid-template-columns: repeat(2, 1fr);
+    .nav-menu {
+        width: 100%;
+        justify-content: center;
+        flex-wrap: wrap;
     }
 
-    .shop-main {
-        grid-template-columns: 1fr;
+    .nav-menu a {
+        flex: 1;
+        min-width: 120px;
+        text-align: center;
     }
 
-    .shop-products-grid {
-        grid-template-columns: 1fr;
+    main {
+        padding: 0 1rem;
+        margin: 1.5rem auto;
     }
 
-    .store-locator {
-        grid-template-columns: 1fr;
-    }
-
-    .footer-content {
-        grid-template-columns: 1fr;
-        gap: 1.5rem;
-    }
-}
-
-@media (max-width: 480px) {
-    .products-grid {
-        grid-template-columns: 1fr;
+    .hero-section {
+        padding: 1.5rem;
     }
 
     .hero-title {
         font-size: 2rem;
+        margin-bottom: 1rem;
+    }
+
+    .hero-description {
+        font-size: 0.95rem;
+        line-height: 1.6;
+    }
+
+    .section-subtitle {
+        font-size: 1.3rem;
+        margin: 1.5rem 0 1rem;
+    }
+
+    .featured-books {
+        gap: 1rem;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .featured-book {
+        width: 100px;
+        height: 100px;
+    }
+
+    /* Reorganizar layout con sidebar */
+    .products-section-with-sidebar {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .books-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+    }
+
+    .map-stores-sidebar {
+        position: static;
+        order: -1;
+        /* Mover el sidebar arriba en móviles */
+    }
+
+    .sidebar-map img {
+        min-height: 200px;
+    }
+
+    /* Tienda layout */
+    .shop-main {
+        grid-template-columns: 1fr;
+        padding: 0 1rem;
+    }
+
+    .categories-sidebar {
+        order: -1;
+        /* Mover filtros arriba */
+        padding: 1.5rem;
+    }
+
+    .shop-products {
+        padding: 1.5rem;
+    }
+
+    .shop-products-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .product-image-wrapper {
+        height: 250px;
+    }
+
+    /* Store locator */
+    .store-locator {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    /* Footer */
+    .footer-content {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    footer {
+        padding: 1.5rem;
+    }
+}
+
+/* Mobile Landscape & Small Phones (576px and below) */
+@media (max-width: 576px) {
+    .logo {
+        font-size: 1.3rem;
+        letter-spacing: 0.05em;
+    }
+
+    .user-icon {
+        font-size: 1.3rem;
+    }
+
+    nav {
+        margin: 0.75rem auto;
+    }
+
+    .nav-menu a {
+        padding: 0.5rem 0.75rem;
+        font-size: 0.85rem;
+    }
+
+    .hero-section {
+        padding: 1.25rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .hero-title {
+        font-size: 1.75rem;
+    }
+
+    .hero-description {
+        font-size: 0.9rem;
+    }
+
+    .section-subtitle {
+        font-size: 1.2rem;
+    }
+
+    .featured-books {
+        gap: 0.75rem;
+    }
+
+    .featured-book {
+        width: 90px;
+        height: 90px;
+    }
+
+    .books-grid {
+        gap: 1rem;
+    }
+
+    .product-card {
+        padding: 1rem;
+    }
+
+    .product-card img {
+        height: 180px;
+    }
+
+    .product-title {
+        font-size: 1rem;
+    }
+
+    .product-price {
+        font-size: 1.1rem;
+    }
+
+    .shop-products {
+        padding: 1rem;
+    }
+
+    .shop-products-grid {
+        gap: 1rem;
+    }
+
+    .product-image-wrapper {
+        height: 220px;
+    }
+
+    .product-name {
+        font-size: 1.1rem;
+    }
+
+    .product-description {
+        font-size: 0.9rem;
+    }
+
+    .categories-sidebar {
+        padding: 1rem;
+    }
+
+    .sidebar-title {
+        font-size: 1.2rem;
+        margin-bottom: 1rem;
+    }
+
+    .filter-label {
+        padding: 0.6rem 1rem;
+        font-size: 0.9rem;
+    }
+
+    .sidebar-store-item {
+        padding: 0.75rem;
+        font-size: 1rem;
+    }
+
+    footer {
+        padding: 1.25rem;
+        margin-top: 2rem;
+    }
+
+    .footer-links {
+        gap: 1rem;
+    }
+
+    .footer-links a {
+        font-size: 1.3rem;
+    }
+
+    .footer-column p {
+        font-size: 0.9rem;
+    }
+}
+
+/* Extra Small Phones (480px and below) */
+@media (max-width: 480px) {
+    header {
+        padding: 0.75rem 1rem;
+    }
+
+    .logo {
+        font-size: 1.2rem;
+    }
+
+    .user-icon {
+        font-size: 1.2rem;
+    }
+
+    .search-form input {
+        padding: 0.6rem 1rem 0.6rem 2.5rem;
+        font-size: 0.9rem;
+    }
+
+    .nav-menu {
+        gap: 0.5rem;
+    }
+
+    .nav-menu a {
+        padding: 0.5rem 0.6rem;
+        font-size: 0.8rem;
+        min-width: 100px;
+    }
+
+    main {
+        padding: 0 0.75rem;
+    }
+
+    .hero-section {
+        padding: 1rem;
+    }
+
+    .hero-title {
+        font-size: 1.5rem;
+    }
+
+    .hero-description {
+        font-size: 0.85rem;
+        line-height: 1.5;
+    }
+
+    .section-subtitle {
+        font-size: 1.1rem;
     }
 
     .featured-books {
         flex-direction: column;
         align-items: center;
+        gap: 0.75rem;
+    }
+
+    .featured-book {
+        width: 120px;
+        height: 120px;
+    }
+
+    /* Grid de productos a una columna */
+    .products-grid,
+    .books-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    .product-card {
+        padding: 1rem;
+    }
+
+    .product-card img {
+        height: 200px;
+    }
+
+    .shop-products {
+        padding: 0.75rem;
+    }
+
+    .shop-products-grid {
+        gap: 1rem;
+    }
+
+    .product-image-wrapper {
+        height: 200px;
+    }
+
+    .product-info {
+        padding: 1rem;
+    }
+
+    .product-name {
+        font-size: 1rem;
+        margin-bottom: 0.75rem;
+    }
+
+    .product-description {
+        font-size: 0.85rem;
+        margin-bottom: 0.75rem;
+    }
+
+    .add-to-cart {
+        padding: 0.6rem;
+        font-size: 0.9rem;
+    }
+
+    .categories-sidebar {
+        padding: 1rem;
+    }
+
+    .sidebar-title {
+        font-size: 1.1rem;
+    }
+
+    .filter-group {
+        gap: 0.75rem;
+    }
+
+    .filter-label {
+        padding: 0.5rem 0.75rem;
+        font-size: 0.85rem;
+    }
+
+    .map-stores-sidebar {
+        padding: 1rem;
+    }
+
+    .sidebar-map img {
+        min-height: 180px;
+    }
+
+    .sidebar-store-item {
+        padding: 0.6rem;
+        font-size: 0.9rem;
+    }
+
+    footer {
+        padding: 1rem;
+    }
+
+    .footer-content {
+        gap: 1rem;
+    }
+
+    .footer-links a {
+        font-size: 1.2rem;
+    }
+
+    .footer-column p {
+        font-size: 0.85rem;
     }
 }
