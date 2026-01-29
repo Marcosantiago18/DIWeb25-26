@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/estilos.css">
+    <!-- ... otros meta tags ... -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">
+</head>
+    <body class="font-[Plus_Jakarta_Sans] h-screen">
+        <!-- 01-Instalacion y configuracion -->
+        <h1 class="text-center text-white bg-red-900 p-8 font-bold text-5xl">Bienvenido a Tailwind mediante CLI</h1>
+        
+        <!-- 02-Conceptos-Base -->
+        <h1>Bienvenido a Tailwind mediante CLI</h1>
+        <h2>Bienvenido a Tailwind mediante CLI</h2>
+
+        <!-- 03-Colores y Personalizacion -->
+         <!-- Icono de Facebook con color personalizado -->
+        <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            class="w-12 h-12 fill-[#1877f2]"
+        >
+            <path d="M20 3H4a1..."></path>
+        </svg>
+        <h1 class="bg-black/90 text-pink-900/20">Título con transparencias</h1>
+        <div class="text-green-500 bg-black">
+            <p>Este texto hereda el color verde</p>
+            <p>Este también</p>
+        </div>
+        <div class="[&>*]:bg-blue-500 [&>*]:p-4">
+            <p>Soy azul con padding</p>
+            <p>Yo también</p>
+        </div>
+        <h1 class="bg-[#2E86AB] text-white">Título con color personalizado directo</h1>
+
+        <!-- 04-Tipografia y Fuentes -->
+        <p class="text-[40px]">Texto de 40 píxeles exactos</p>
+        <h1 class="text-5xl font-medium italic text-start">Textos en Tailwind</h1>
+
+        <!-- 05-Box Model y layout -->
+
+        <!-- Anchura -->
+        <div class="text-center w-1/2 bg-amber-300">
+            <h1 class="text-5xl">Mitad de ancho</h1>
+        </div>
+
+        <!-- imagen responsiva -->
+        <div class="w-1/2 bg-amber-300">
+            <!-- La imagen ocupará el 100% del ancho de SU PADRE (el 50% de la pantalla) -->
+            <img src="./assets/landscape.png" class="w-full" alt="Paisaje">
+        </div>
+
+        <!-- Altura (height) y el Problema del 100% -->
+        <div class="text-center w-md h-4/5 bg-amber-300">
+            <!-- Ahora sí ocupará el 80% de la altura de la pantalla (que hereda del body) -->
+            ... contenido ...
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veniam sequi enim harum, assumenda officiis eos aliquid tenetur ex nesciunt provident. Impedit optio delectus nostrum, error obcaecati est blanditiis minus doloremque.
+        </div>
+
+        <!-- padding -->
+        <div class="bg-blue-500 p-10">
+            <p class="bg-white">Contenido con padding de 40px alrededor</p>
+        </div>
+
+        <!-- margin -->
+        <div class="w-1/2 mx-auto bg-amber-300">
+            Este div estará centrado horizontalmente
+        </div>
+        <div class="-mb-6">
+            Margen bottom negativo de -24px
+        </div>
+
+        <!-- bordes -->
+        <nav class="border-x-10 border-amber-400">
+            Borde horizontal de 40px color ámbar
+        </nav>
+        <div class="border-4 border-blue-500 border-dashed">
+            Borde azul discontinuo
+        </div>
+
+
+        <!-- espaciado entre elementos hijos -->
+        <nav class="space-y-4">
+            <a href="#" class="bg-slate-800 px-8 py-4 block">Inicio</a>
+            <a href="#" class="bg-slate-800 px-8 py-4 block">Acerca de</a>
+            <a href="#" class="bg-slate-800 px-8 py-4 block">Contacto</a>
+        </nav>
+
+        <!-- Bordes entre Elementos Hijos: divide- -->
+        <nav class="flex divide-x-10 divide-lime-500 divide-dotted">
+            <a href="#" class="px-8 py-4">Inicio</a>
+            <a href="#" class="px-8 py-4">Acerca de</a>
+            <a href="#" class="px-8 py-4">Contacto</a>
+        </nav>
+
+        <!-- Problema con <a> y Padding Vertical -->
+        <!-- No funciona correctamente -->
+        <a href="#" class="px-8 py-4">Enlace</a>
+
+        <!-- Correcto -->
+        <a href="#" class="px-8 py-4 inline-block">Enlace</a>
+        <!-- o -->
+        <a href="#" class="px-8 py-4 block">Enlace</a>
+
+        <!-- Ejemplo Completo: Card con Tailwind -->
+        <div class="w-md mx-auto my-20 border-2 border-gray-500/50 py-7 px-5 rounded-2xl space-y-8">
+            <img src="./assets/mountain_landscape.png" class="w-full h-60 object-cover rounded-md" alt="">
+            <h3 class="text-3xl font-bold my-6">¡Título Card!</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut fuga temporibus consectetur libero impedit a
+                provident sed exercitationem, praesentium quam ea accusamus voluptatem unde? Est rem quod dignissimos sint
+                tempora.
+            </p>
+            <a href="#" class="block bg-blue-600 text-white text-center py-4 rounded-full">Leer más</a>
+        </div> 
+    </body>
+</html>

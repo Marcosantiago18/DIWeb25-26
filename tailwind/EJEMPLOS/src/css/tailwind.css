@@ -1,0 +1,12 @@
+@import "tailwindcss";
+
+/* 02-Conceptos-Base */
+
+/* @layer base {
+  h1 {
+    @apply text-4xl font-bold mb-4;
+  }
+  h2 {
+    @apply text-2xl font-semibold mb-2;
+  }
+} */
