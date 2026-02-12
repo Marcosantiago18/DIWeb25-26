@@ -9,10 +9,11 @@
     <!-- Google Fonts for premium typography -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
     <style>
         body {
-            font-family: 'Inter', sans-serif;
+            font-family: 'Space Grotesk', sans-serif;
         }
     </style>
 </head>
@@ -32,8 +33,19 @@
                     <span class="text-xl font-bold tracking-tight text-white">CODEMSG</span>
                 </div>
 
+
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#" class="text-sm font-medium text-gray-300 hover:text-white transition-colors">Acerca
+                        de</a>
+                    <a href="registro.html"
+                        class="px-5 py-2.5 bg-white text-black font-semibold rounded-full text-sm hover:bg-gray-200 transition-transform transform hover:scale-105 shadow-lg shadow-white/20">
+                        Ingresar al curso
+                    </a>
+                </div>
+
                 <!-- Mobile menu button (Hamburger) -->
-                <div class="flex items-center">
+                <div class="flex md:hidden items-center">
                     <button type="button" id="mobile-menu-btn"
                         class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-white/10 focus:outline-none transition-colors duration-200">
                         <span class="sr-only">Abrir menú</span>
@@ -50,9 +62,9 @@
 
         <!-- Mobile Menu Overlay -->
         <div id="mobile-menu"
-            class="fixed top-16 inset-x-0 bottom-0 z-10 bg-black flex flex-col items-center justify-center space-y-8 transition-transform duration-500 ease-in-out -translate-y-[150%]">
+            class="fixed top-16 inset-x-0 bottom-0 z-10 bg-black flex flex-col items-center justify-center space-y-8 transition-transform duration-500 ease-in-out -translate-y-[150%] md:hidden">
             <a href="#" class="text-2xl font-medium text-gray-300 hover:text-white transition-colors">Acerca de</a>
-            <a href="#"
+            <a href="registro.html"
                 class="px-8 py-4 bg-white text-black font-bold rounded-full text-xl hover:bg-gray-200 transition-transform transform hover:scale-105 shadow-lg shadow-white/20">
                 Ingresar al curso
             </a>
@@ -84,11 +96,11 @@
                     Desde HTML hasta arquitecturas complejas.
                 </p>
                 <div class="flex flex-col sm:flex-row gap-4 justify-center sm:justify-start">
-                    <a href="#"
+                    <a href="registro.html"
                         class="px-8 py-3 bg-white text-black font-semibold rounded-full hover:bg-gray-200 transition-all duration-300 transform hover:-translate-y-1 shadow-lg shadow-white/20">
                         Comenzar Ahora
                     </a>
-                    <a href="#"
+                    <a href="registro.html"
                         class="px-8 py-3 bg-white/10 backdrop-blur-sm border border-white/20 text-white font-semibold rounded-full hover:bg-white/20 transition-all duration-300">
                         Ver Cursos
                     </a>
@@ -170,6 +182,278 @@
                         Despliega tus aplicaciones en la nube y automatiza procesos con CI/CD.
                     </p>
                 </div>
+            </div>
+        </section>
+
+
+
+        <!-- Statistics Section -->
+        <section class="py-12 border-y border-white/5 bg-white/5 backdrop-blur-sm rounded-3xl">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+                <div class="space-y-2">
+                    <div class="text-4xl font-bold text-blue-400">+5000</div>
+                    <div class="text-sm text-gray-400 font-medium">Alumnos Graduados</div>
+                </div>
+                <div class="space-y-2">
+                    <div class="text-4xl font-bold text-purple-400">98%</div>
+                    <div class="text-sm text-gray-400 font-medium">Tasa de Empleo</div>
+                </div>
+                <div class="space-y-2">
+                    <div class="text-4xl font-bold text-emerald-400">4.9/5</div>
+                    <div class="text-sm text-gray-400 font-medium">Valoración Media</div>
+                </div>
+                <div class="space-y-2">
+                    <div class="text-4xl font-bold text-orange-400">+200</div>
+                    <div class="text-sm text-gray-400 font-medium">Empresas Partner</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials Section -->
+        <section>
+            <div class="text-center mb-12 sm:text-left">
+                <h2 class="text-3xl font-bold text-white mb-4">Lo que dicen nuestros alumnos</h2>
+                <p class="text-gray-400">Historias reales de éxito en el mundo tech.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Testimonial 1 -->
+                <div
+                    class="bg-zinc-900/50 border border-white/5 rounded-2xl p-6 hover:bg-zinc-800/50 transition-colors duration-300">
+                    <div class="flex items-center gap-4 mb-4">
+                        <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=150&auto=format&fit=crop"
+                            alt="User" class="w-12 h-12 rounded-full object-cover ring-2 ring-blue-500/20">
+                        <div>
+                            <h4 class="text-white font-semibold">Ana García</h4>
+                            <p class="text-xs text-blue-400">Frontend Developer @TechCorp</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-400 text-sm leading-relaxed italic">"El curso cambió mi carrera por completo.
+                        Pasé
+                        de no saber nada de código a trabajar en una startup en solo 6 meses."</p>
+                </div>
+
+                <!-- Testimonial 2 -->
+                <div
+                    class="bg-zinc-900/50 border border-white/5 rounded-2xl p-6 hover:bg-zinc-800/50 transition-colors duration-300">
+                    <div class="flex items-center gap-4 mb-4">
+                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=150&auto=format&fit=crop"
+                            alt="User" class="w-12 h-12 rounded-full object-cover ring-2 ring-purple-500/20">
+                        <div>
+                            <h4 class="text-white font-semibold">Carlos Ruiz</h4>
+                            <p class="text-xs text-purple-400">Fullstack Engineer @Innovate</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-400 text-sm leading-relaxed italic">"La metodología práctica es increíble. No
+                        solo
+                        aprendes teoría, sino que construyes proyectos reales desde el primer día."</p>
+                </div>
+
+                <!-- Testimonial 3 -->
+                <div
+                    class="bg-zinc-900/50 border border-white/5 rounded-2xl p-6 hover:bg-zinc-800/50 transition-colors duration-300 md:col-span-2 lg:col-span-1">
+                    <div class="flex items-center gap-4 mb-4">
+                        <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=150&auto=format&fit=crop"
+                            alt="User" class="w-12 h-12 rounded-full object-cover ring-2 ring-emerald-500/20">
+                        <div>
+                            <h4 class="text-white font-semibold">Laura Méndez</h4>
+                            <p class="text-xs text-emerald-400">Data Scientist @DataFlow</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-400 text-sm leading-relaxed italic">"Gracias a CodeMSG pude especializarme en
+                        Big
+                        Data. Los mentores son expertos de la industria que te guían paso a paso."</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Pricing Section -->
+        <section>
+            <div class="text-center mb-12 sm:text-left">
+                <h2 class="text-3xl font-bold text-white mb-4">Planes de Inversión</h2>
+                <p class="text-gray-400">Elige el plan que mejor se adapte a tus objetivos.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Basic Plan -->
+                <div
+                    class="bg-zinc-900/50 border border-white/5 rounded-3xl p-8 flex flex-col hover:border-white/20 transition-colors duration-300">
+                    <h3 class="text-xl font-semibold text-white mb-2">Essential</h3>
+                    <p class="text-gray-400 text-sm mb-6">Para empezar con bases sólidas.</p>
+                    <div class="mb-6"><span class="text-4xl font-bold text-white">29€</span><span
+                            class="text-gray-500">/mes</span></div>
+                    <ul class="space-y-4 mb-8 flex-1">
+                        <li class="flex items-center text-gray-300 text-sm"><svg class="w-5 h-5 text-emerald-400 mr-2"
+                                fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M5 13l4 4L19 7"></path>
+                            </svg>Acceso a cursos básicos</li>
+                        <li class="flex items-center text-gray-300 text-sm"><svg class="w-5 h-5 text-emerald-400 mr-2"
+                                fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M5 13l4 4L19 7"></path>
+                            </svg>Comunidad de Discord</li>
+                        <li class="flex items-center text-gray-300 text-sm"><svg class="w-5 h-5 text-emerald-400 mr-2"
+                                fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M5 13l4 4L19 7"></path>
+                            </svg>Certificado de finalización</li>
+                    </ul>
+                    <a href="registro.html"
+                        class="w-full py-3 border border-white/20 rounded-xl text-white font-semibold text-center hover:bg-white/10 transition-colors">Empezar
+                        Gratis</a>
+                </div>
+
+                <!-- Pro Plan (Highlighted) -->
+                <div
+                    class="relative bg-zinc-900/80 border border-blue-500/50 rounded-3xl p-8 flex flex-col shadow-2xl shadow-blue-500/10 transform scale-105 z-10">
+                    <div
+                        class="absolute top-0 right-0 bg-blue-500 text-white text-xs font-bold px-3 py-1 rounded-bl-xl rounded-tr-2xl">
+                        RECOMENDADO</div>
+                    <h3 class="text-xl font-semibold text-white mb-2">Professional</h3>
+                    <p class="text-gray-400 text-sm mb-6">Para desarrolladores que van en serio.</p>
+                    <div class="mb-6"><span class="text-4xl font-bold text-white">49€</span><span
+                            class="text-gray-500">/mes</span></div>
+                    <ul class="space-y-4 mb-8 flex-1">
+                        <li class="flex items-center text-gray-300 text-sm"><svg class="w-5 h-5 text-blue-400 mr-2"
+                                fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M5 13l4 4L19 7"></path>
+                            </svg>Todo lo de Essential</li>
+                        <li class="flex items-center text-gray-300 text-sm"><svg class="w-5 h-5 text-blue-400 mr-2"
+                                fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M5 13l4 4L19 7"></path>
+                            </svg>Proyectos reales guiados</li>
+                        <li class="flex items-center text-gray-300 text-sm"><svg class="w-5 h-5 text-blue-400 mr-2"
+                                fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M5 13l4 4L19 7"></path>
+                            </svg>Mentoría semanal grupal</li>
+                        <li class="flex items-center text-gray-300 text-sm"><svg class="w-5 h-5 text-blue-400 mr-2"
+                                fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M5 13l4 4L19 7"></path>
+                            </svg>Revisión de código</li>
+                    </ul>
+                    <a href="registro.html"
+                        class="w-full py-3 bg-blue-500 rounded-xl text-white font-semibold text-center hover:bg-blue-600 transition-colors shadow-lg shadow-blue-500/20">Suscribirse
+                        Ahora</a>
+                </div>
+
+                <!-- Master Plan -->
+                <div
+                    class="bg-zinc-900/50 border border-white/5 rounded-3xl p-8 flex flex-col hover:border-white/20 transition-colors duration-300">
+                    <h3 class="text-xl font-semibold text-white mb-2">Master</h3>
+                    <p class="text-gray-400 text-sm mb-6">La experiencia completa y personalizada.</p>
+                    <div class="mb-6"><span class="text-4xl font-bold text-white">99€</span><span
+                            class="text-gray-500">/mes</span></div>
+                    <ul class="space-y-4 mb-8 flex-1">
+                        <li class="flex items-center text-gray-300 text-sm"><svg class="w-5 h-5 text-purple-400 mr-2"
+                                fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M5 13l4 4L19 7"></path>
+                            </svg>Todo lo de Professional</li>
+                        <li class="flex items-center text-gray-300 text-sm"><svg class="w-5 h-5 text-purple-400 mr-2"
+                                fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M5 13l4 4L19 7"></path>
+                            </svg>Mentoría 1 a 1 mensual</li>
+                        <li class="flex items-center text-gray-300 text-sm"><svg class="w-5 h-5 text-purple-400 mr-2"
+                                fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M5 13l4 4L19 7"></path>
+                            </svg>Simulación de entrevistas</li>
+                    </ul>
+                    <a href="registro.html"
+                        class="w-full py-3 border border-white/20 rounded-xl text-white font-semibold text-center hover:bg-white/10 transition-colors">Contactar
+                        Ventas</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section class="max-w-3xl mx-auto w-full">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-white mb-4">Preguntas Frecuentes</h2>
+                <p class="text-gray-400">Todo lo que necesitas saber antes de empezar.</p>
+            </div>
+
+            <div class="space-y-4">
+                <!-- Question 1 -->
+                <details
+                    class="group bg-zinc-900/50 border border-white/5 rounded-2xl overflow-hidden transition-all duration-300 open:bg-zinc-800/50">
+                    <summary
+                        class="flex justify-between items-center cursor-pointer p-6 list-none text-white font-medium">
+                        <span>¿Necesito experiencia previa para inscribirme?</span>
+                        <span class="transition-transform group-open:rotate-180">
+                            <svg class="w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </span>
+                    </summary>
+                    <div class="px-6 pb-6 text-gray-400 text-sm leading-relaxed">
+                        No, nuestros cursos están diseñados para llevarte desde cero hasta un nivel profesional. Tenemos
+                        rutas de aprendizaje específicas para principiantes absolutos.
+                    </div>
+                </details>
+
+                <!-- Question 2 -->
+                <details
+                    class="group bg-zinc-900/50 border border-white/5 rounded-2xl overflow-hidden transition-all duration-300 open:bg-zinc-800/50">
+                    <summary
+                        class="flex justify-between items-center cursor-pointer p-6 list-none text-white font-medium">
+                        <span>¿Los certificados tienen validez oficial?</span>
+                        <span class="transition-transform group-open:rotate-180">
+                            <svg class="w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </span>
+                    </summary>
+                    <div class="px-6 pb-6 text-gray-400 text-sm leading-relaxed">
+                        Nuestros certificados son reconocidos por empresas líderes en la industria tecnológica y pueden
+                        añadirse directamente a tu perfil de LinkedIn.
+                    </div>
+                </details>
+
+                <!-- Question 3 -->
+                <details
+                    class="group bg-zinc-900/50 border border-white/5 rounded-2xl overflow-hidden transition-all duration-300 open:bg-zinc-800/50">
+                    <summary
+                        class="flex justify-between items-center cursor-pointer p-6 list-none text-white font-medium">
+                        <span>¿Puedo cancelar mi suscripción en cualquier momento?</span>
+                        <span class="transition-transform group-open:rotate-180">
+                            <svg class="w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </span>
+                    </summary>
+                    <div class="px-6 pb-6 text-gray-400 text-sm leading-relaxed">
+                        Sí, no tenemos permanencia. Puedes cancelar tu suscripción desde tu panel de usuario y tendrás
+                        acceso hasta que finalice el periodo facturado.
+                    </div>
+                </details>
+                <!-- Question 4 -->
+                <details
+                    class="group bg-zinc-900/50 border border-white/5 rounded-2xl overflow-hidden transition-all duration-300 open:bg-zinc-800/50">
+                    <summary
+                        class="flex justify-between items-center cursor-pointer p-6 list-none text-white font-medium">
+                        <span>¿Hay garantía de devolución?</span>
+                        <span class="transition-transform group-open:rotate-180">
+                            <svg class="w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </span>
+                    </summary>
+                    <div class="px-6 pb-6 text-gray-400 text-sm leading-relaxed">
+                        Absolutamente. Si en los primeros 14 días no estás satisfecho con el contenido, te devolvemos el
+                        100% de tu dinero sin preguntas.
+                    </div>
+                </details>
             </div>
         </section>
 
