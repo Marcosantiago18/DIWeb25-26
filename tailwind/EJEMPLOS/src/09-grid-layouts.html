@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="../src/css/estilos.css" rel="stylesheet">
+</head>
+
+<body class="bg-gray-100 text-slate-800">
+    <div class="container mx-auto px-4 py-8 space-y-12">
+        <h1 class="text-4xl font-bold text-center mb-10 text-slate-800">Ejemplos de Grid Layout</h1>
+
+        <!-- Definir Columnas: grid-cols-{n} -->
+        <section class="space-y-4 bg-white p-6 rounded-lg shadow-sm">
+            <h2 class="text-2xl font-semibold text-slate-700 border-b pb-2">1. Definir Columnas (grid-cols-3)</h2>
+            <div class="grid grid-cols-3 gap-4">
+                <div class="bg-sky-200 p-4 rounded text-center font-bold text-sky-700">Item 1</div>
+                <div class="bg-sky-200 p-4 rounded text-center font-bold text-sky-700">Item 2</div>
+                <div class="bg-sky-200 p-4 rounded text-center font-bold text-sky-700">Item 3</div>
+                <div class="bg-sky-200 p-4 rounded text-center font-bold text-sky-700">Item 4</div>
+                <div class="bg-sky-200 p-4 rounded text-center font-bold text-sky-700">Item 5</div>
+                <div class="bg-sky-200 p-4 rounded text-center font-bold text-sky-700">Item 6</div>
+            </div>
+        </section>
+
+        <!-- Definir Filas: grid-rows-{n} -->
+        <section class="space-y-4 bg-white p-6 rounded-lg shadow-sm">
+            <h2 class="text-2xl font-semibold text-slate-700 border-b pb-2">2. Definir Filas (grid-rows-3)</h2>
+            <div class="grid grid-cols-2 grid-rows-3 gap-4 h-64">
+                <!-- 2 columnas × 3 filas = 6 celdas -->
+                <div class="bg-emerald-200 p-4 rounded flex items-center justify-center font-bold text-emerald-700">Item
+                    1</div>
+                <div class="bg-emerald-200 p-4 rounded flex items-center justify-center font-bold text-emerald-700">Item
+                    2</div>
+                <div class="bg-emerald-200 p-4 rounded flex items-center justify-center font-bold text-emerald-700">Item
+                    3</div>
+                <div class="bg-emerald-200 p-4 rounded flex items-center justify-center font-bold text-emerald-700">Item
+                    4</div>
+                <div class="bg-emerald-200 p-4 rounded flex items-center justify-center font-bold text-emerald-700">Item
+                    5</div>
+                <div class="bg-emerald-200 p-4 rounded flex items-center justify-center font-bold text-emerald-700">Item
+                    6</div>
+            </div>
+        </section>
+
+        <!-- Espaciado: gap- -->
+        <section class="space-y-4 bg-white p-6 rounded-lg shadow-sm">
+            <h2 class="text-2xl font-semibold text-slate-700 border-b pb-2">3. Espaciado (gap-6)</h2>
+            <div class="grid grid-cols-3 gap-6">
+                <!-- Separación de 24px entre todas las celdas -->
+                <div class="bg-violet-200 p-4 rounded text-center font-bold text-violet-700">Item 1</div>
+                <div class="bg-violet-200 p-4 rounded text-center font-bold text-violet-700">Item 2</div>
+                <div class="bg-violet-200 p-4 rounded text-center font-bold text-violet-700">Item 3</div>
+                <div class="bg-violet-200 p-4 rounded text-center font-bold text-violet-700">Item 4</div>
+                <div class="bg-violet-200 p-4 rounded text-center font-bold text-violet-700">Item 5</div>
+                <div class="bg-violet-200 p-4 rounded text-center font-bold text-violet-700">Item 6</div>
+            </div>
+        </section>
+
+        <!-- Ejemplo Práctico: Galería de Imágenes -->
+        <section class="space-y-4 bg-white p-6 rounded-lg shadow-sm">
+            <h2 class="text-2xl font-semibold text-slate-700 border-b pb-2">4. Galería de Imágenes</h2>
+            <div
+                class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 p-4 border rounded bg-gray-50">
+                <img src="https://placehold.co/400x300?text=Img+1" alt="Imagen 1"
+                    class="w-full h-64 object-cover rounded-lg shadow hover:shadow-lg transition-shadow">
+                <img src="https://placehold.co/400x300?text=Img+2" alt="Imagen 2"
+                    class="w-full h-64 object-cover rounded-lg shadow hover:shadow-lg transition-shadow">
+                <img src="https://placehold.co/400x300?text=Img+3" alt="Imagen 3"
+                    class="w-full h-64 object-cover rounded-lg shadow hover:shadow-lg transition-shadow">
+                <img src="https://placehold.co/400x300?text=Img+4" alt="Imagen 4"
+                    class="w-full h-64 object-cover rounded-lg shadow hover:shadow-lg transition-shadow">
+                <img src="https://placehold.co/400x300?text=Img+5" alt="Imagen 5"
+                    class="w-full h-64 object-cover rounded-lg shadow hover:shadow-lg transition-shadow">
+                <img src="https://placehold.co/400x300?text=Img+6" alt="Imagen 6"
+                    class="w-full h-64 object-cover rounded-lg shadow hover:shadow-lg transition-shadow">
+            </div>
+        </section>
+
+        <!-- col-span-{n} - Ocupar varias columnas -->
+        <section class="space-y-4 bg-white p-6 rounded-lg shadow-sm">
+            <h2 class="text-2xl font-semibold text-slate-700 border-b pb-2">5. Col Span (Ocupar columnas)</h2>
+            <div class="grid grid-cols-3 gap-4">
+                <div class="col-span-2 bg-blue-500 text-white p-6 rounded shadow flex justify-center items-center">Ocupa
+                    2 columnas</div>
+                <div class="bg-red-500 text-white p-6 rounded shadow flex justify-center items-center">1 columna</div>
+                <div class="bg-green-500 text-white p-6 rounded shadow flex justify-center items-center">1 columna</div>
+                <div class="col-span-2 bg-yellow-500 text-white p-6 rounded shadow flex justify-center items-center">
+                    Ocupa 2 columnas</div>
+            </div>
+        </section>
+
+        <!-- row-span-{n} - Ocupar varias filas -->
+        <section class="space-y-4 bg-white p-6 rounded-lg shadow-sm">
+            <h2 class="text-2xl font-semibold text-slate-700 border-b pb-2">6. Row Span (Ocupar filas)</h2>
+            <div class="grid grid-cols-3 grid-rows-3 gap-4 h-80">
+                <div class="row-span-2 bg-purple-500 text-white p-4 rounded shadow flex justify-center items-center">
+                    Ocupa 2 filas</div>
+                <div class="bg-blue-500 text-white p-4 rounded shadow flex justify-center items-center">Normal</div>
+                <div class="bg-red-500 text-white p-4 rounded shadow flex justify-center items-center">Normal</div>
+                <div class="bg-green-500 text-white p-4 rounded shadow flex justify-center items-center">Normal</div>
+                <div class="bg-yellow-500 text-white p-4 rounded shadow flex justify-center items-center">Normal</div>
+            </div>
+        </section>
+
+        <!-- Ejemplo Avanzado: Dashboard Layout -->
+        <section class="space-y-4 bg-white p-6 rounded-lg shadow-sm">
+            <h2 class="text-2xl font-semibold text-slate-700 border-b pb-2">7. Dashboard Layout</h2>
+            <div class="grid grid-cols-4 grid-rows-3 gap-4 p-4 border rounded bg-gray-100 h-96">
+                <!-- Header: ocupa las 4 columnas -->
+                <header class="col-span-4 bg-slate-800 text-white flex items-center px-6 rounded-lg shadow-md">
+                    <h1 class="text-2xl font-bold">Dashboard</h1>
+                </header>
+
+                <!-- Sidebar: ocupa 2 filas -->
+                <aside class="row-span-2 bg-slate-700 text-white p-4 rounded-lg shadow-md">
+                    <nav>
+                        <ul class="space-y-2">
+                            <li><a href="#" class="hover:text-blue-300 transition-colors">Inicio</a></li>
+                            <li><a href="#" class="hover:text-blue-300 transition-colors">Estadísticas</a></li>
+                            <li><a href="#" class="hover:text-blue-300 transition-colors">Configuración</a></li>
+                        </ul>
+                    </nav>
+                </aside>
+
+                <!-- Main content: ocupa 3 columnas y 2 filas -->
+                <main class="col-span-3 row-span-2 bg-white p-6 rounded-lg shadow-md border">
+                    <h2 class="text-xl font-semibold mb-4">Contenido Principal</h2>
+                    <p class="text-gray-600">Aquí va el contenido del dashboard...</p>
+                </main>
+            </div>
+        </section>
+
+        <!-- col-start-{n} y col-end-{n}-->
+        <section class="space-y-4 bg-white p-6 rounded-lg shadow-sm">
+            <h2 class="text-2xl font-semibold text-slate-700 border-b pb-2">8. Inicio y Fin de Columnas</h2>
+            <div class="grid grid-cols-6 gap-4">
+                <div class="bg-gray-200 text-gray-400 p-4 rounded flex justify-center items-center">Col 1</div>
+                <div
+                    class="col-start-2 col-end-5 bg-blue-500 text-white p-4 rounded shadow flex justify-center items-center font-semibold">
+                    <!-- Empieza en la columna 2, termina en la 5 (ocupa 3 columnas) -->
+                    Empieza col 2, termina col 5
+                </div>
+                <div class="bg-gray-200 text-gray-400 p-4 rounded flex justify-center items-center">Col 5</div>
+                <div class="bg-gray-200 text-gray-400 p-4 rounded flex justify-center items-center">Col 6</div>
+            </div>
+        </section>
+
+        <!-- row-start-{n} y row-end-{n} -->
+        <section class="space-y-4 bg-white p-6 rounded-lg shadow-sm">
+            <h2 class="text-2xl font-semibold text-slate-700 border-b pb-2">9. Inicio y Fin de Filas</h2>
+            <div class="grid grid-rows-4 grid-cols-2 gap-4 h-80">
+                <div class="bg-gray-200 text-gray-400 p-4 rounded flex justify-center items-center">Fila 1 (Dummy)</div>
+                <div class="bg-gray-200 text-gray-400 p-4 rounded flex justify-center items-center">Fila 1 (Dummy)</div>
+
+                <div
+                    class="row-start-2 row-end-4 col-span-2 bg-red-500 text-white p-4 rounded shadow flex justify-center items-center font-bold">
+                    <!-- Empieza en la fila 2, termina en la 4 (ocupa 2 filas) -->
+                    Empieza fila 2, termina fila 4
+                </div>
+
+                <div class="row-start-4 bg-gray-200 text-gray-400 p-4 rounded flex justify-center items-center">Fila 4
+                    (Dummy)</div>
+                <div class="row-start-4 bg-gray-200 text-gray-400 p-4 rounded flex justify-center items-center">Fila 4
+                    (Dummy)</div>
+            </div>
+        </section>
+
+        <!-- Grid Flow: Dirección de Llenado -->
+        <section class="space-y-4 bg-white p-6 rounded-lg shadow-sm">
+            <h2 class="text-2xl font-semibold text-slate-700 border-b pb-2">10. Grid Flow (Columna)</h2>
+            <div class="grid grid-cols-3 grid-flow-col gap-4 h-48 border-2 border-dashed border-gray-300 p-4">
+                <!-- Los elementos se colocan primero verticalmente, luego pasan a la siguiente columna -->
+                <div
+                    class="bg-amber-200 p-4 rounded flex items-center justify-center font-bold text-amber-800 border border-amber-300">
+                    1</div>
+                <div
+                    class="bg-amber-200 p-4 rounded flex items-center justify-center font-bold text-amber-800 border border-amber-300">
+                    2</div>
+                <div
+                    class="bg-amber-200 p-4 rounded flex items-center justify-center font-bold text-amber-800 border border-amber-300">
+                    3</div>
+                <div
+                    class="bg-amber-200 p-4 rounded flex items-center justify-center font-bold text-amber-800 border border-amber-300">
+                    4</div>
+            </div>
+        </section>
+
+        <!-- Columnas Responsivas con Valores Arbitrarios -->
+        <section class="space-y-4 bg-white p-6 rounded-lg shadow-sm">
+            <h2 class="text-2xl font-semibold text-slate-700 border-b pb-2">11. Auto-Fit (minmax)</h2>
+            <!-- Grid con columnas de ancho mínimo 200px que se ajustan automáticamente -->
+            <div class="grid grid-cols-[repeat(auto-fit,minmax(200px,1fr))] gap-4">
+                <div class="bg-blue-500 p-6 rounded text-white shadow text-center">Card 1</div>
+                <div class="bg-red-500 p-6 rounded text-white shadow text-center">Card 2</div>
+                <div class="bg-green-500 p-6 rounded text-white shadow text-center">Card 3</div>
+                <div class="bg-yellow-500 p-6 rounded text-white shadow text-center">Card 4</div>
+            </div>
+        </section>
+
+        <!-- Alineación en Grid -->
+        <section class="space-y-4 bg-white p-6 rounded-lg shadow-sm">
+            <h2 class="text-2xl font-semibold text-slate-700 border-b pb-2">12. Alineación de Items
+                (justify-items-center)</h2>
+
+            <!-- Alineación de Items (dentro de sus celdas) -->
+            <div class="grid grid-cols-3 gap-4 justify-items-center bg-gray-50 border p-4 rounded">
+                <!-- Todos los items estarán centrados en sus celdas -->
+                <div class="w-16 h-16 bg-indigo-500 rounded flex items-center justify-center text-white shadow">1</div>
+                <div class="w-16 h-16 bg-indigo-500 rounded flex items-center justify-center text-white shadow">2</div>
+                <div class="w-16 h-16 bg-indigo-500 rounded flex items-center justify-center text-white shadow">3</div>
+                <div class="w-16 h-16 bg-indigo-500 rounded flex items-center justify-center text-white shadow">4</div>
+                <div class="w-16 h-16 bg-indigo-500 rounded flex items-center justify-center text-white shadow">5</div>
+                <div class="w-16 h-16 bg-indigo-500 rounded flex items-center justify-center text-white shadow">6</div>
+            </div>
+        </section>
+
+        <section class="space-y-4 bg-white p-6 rounded-lg shadow-sm">
+            <h2 class="text-2xl font-semibold text-slate-700 border-b pb-2">13. Alineación del Grid (justify-self)</h2>
+            <!-- Alineación del Grid Completo (dentro del contenedor) -->
+            <div class="grid grid-cols-3 gap-4 h-32 bg-gray-100 rounded border">
+                <div class="justify-self-center bg-pink-500 text-white px-4 py-2 rounded self-center shadow">Centrado
+                </div>
+                <div class="bg-gray-400 text-white px-4 py-2 rounded flex items-center justify-center shadow">Normal
+                </div>
+                <div class="self-end bg-teal-500 text-white px-4 py-2 rounded shadow">Abajo (self-end)</div>
+            </div>
+        </section>
+
+        <!-- Ejemplo Completo: Card Grid Responsive -->
+        <section class="space-y-4 bg-white p-6 rounded-lg shadow-sm">
+            <h2 class="text-2xl font-semibold text-slate-700 border-b pb-2">14. Ejemplo Práctico Final</h2>
+            <div class="container mx-auto p-2">
+                <h1 class="text-3xl font-bold mb-6 text-slate-800">Nuestros Productos</h1>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <!-- Card 1 -->
+                    <div class="bg-white rounded-lg shadow-lg overflow-hidden border">
+                        <img src="https://placehold.co/600x400?text=Product+1" alt="Producto 1"
+                            class="w-full h-48 object-cover">
+                        <div class="p-4">
+                            <h3 class="text-xl font-semibold mb-2">Producto 1</h3>
+                            <p class="text-gray-600 mb-4">Descripción del producto...</p>
+                            <button
+                                class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 transition-colors">
+                                Comprar
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Card 2 -->
+                    <div class="bg-white rounded-lg shadow-lg overflow-hidden border">
+                        <img src="https://placehold.co/600x400?text=Product+2" alt="Producto 2"
+                            class="w-full h-48 object-cover">
+                        <div class="p-4">
+                            <h3 class="text-xl font-semibold mb-2">Producto 2</h3>
+                            <p class="text-gray-600 mb-4">Descripción del producto...</p>
+                            <button
+                                class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 transition-colors">
+                                Comprar
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Card 3 (Featured - ocupa 2 columnas en lg) -->
+                    <div class="bg-white rounded-lg shadow-lg overflow-hidden lg:col-span-2 border">
+                        <img src="https://placehold.co/800x400?text=Featured+Product" alt="Producto Destacado"
+                            class="w-full h-48 object-cover">
+                        <div class="p-4">
+                            <span class="bg-yellow-400 text-xs font-bold px-2 py-1 rounded">DESTACADO</span>
+                            <h3 class="text-xl font-semibold mb-2 mt-2">Producto Destacado</h3>
+                            <p class="text-gray-600 mb-4">Este producto es especial y ocupa más espacio...</p>
+                            <button
+                                class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 transition-colors">
+                                Comprar Ahora
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </div>
+</body>
