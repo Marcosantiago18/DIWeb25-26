@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Design</title>
+    <link rel="stylesheet" href="./css/estilos.css">
+</head>
+
+<body class="bg-gray-50 text-gray-800">
+
+    <div class="container mx-auto p-6 space-y-10">
+        <h1 class="text-4xl font-bold text-center text-teal-600 mb-10">Ejemplos de Responsive Design</h1>
+        <p class="text-center text-gray-600 max-w-2xl mx-auto">Cambia el tamaño de la ventana del navegador para ver el
+            efecto de las media queries.</p>
+
+        <!-- SECCIÓN: Media Queries -->
+        <section class="bg-white p-6 rounded-lg shadow-md border border-gray-200">
+            <h2 class="text-2xl font-semibold mb-4 border-b pb-2 text-gray-700">Sintaxis de Media Queries</h2>
+            <div class="space-y-4">
+                <div class="p-4 border border-gray-100 rounded bg-gray-50/50">
+                    <nav
+                        class="bg-slate-800 sm:bg-red-500 text-white p-4 rounded text-center transition-colors duration-300">
+                        Ejemplo 1 (sm:bg-red-500)
+                        <!-- Fondo gris oscuro por defecto -->
+                        <!-- Fondo rojo cuando la pantalla sea ≥640px -->
+                    </nav>
+                </div>
+
+                <div class="p-4 border border-gray-100 rounded bg-gray-50/50">
+                    <nav class="bg-slate-800
+                            sm:bg-red-500
+                            md:bg-green-500
+                            lg:bg-blue-500
+                            text-white p-4 rounded text-center transition-colors duration-300">
+                        Ejemplo 2 (Múltiples Breakpoints)
+                        <!-- 
+                        - Pantallas pequeñas (<640px): gris oscuro
+                        - sm (≥640px): rojo
+                        - md (≥768px): verde
+                        - lg (≥1024px): azul
+                        -->
+                    </nav>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECCIÓN: Mobile-First -->
+        <section class="bg-white p-6 rounded-lg shadow-md border border-gray-200">
+            <h2 class="text-2xl font-semibold mb-4 border-b pb-2 text-gray-700">Enfoque Mobile-First (Recomendado)</h2>
+            <div class="overflow-hidden rounded-lg shadow border border-gray-200">
+                <nav class="bg-slate-800
+                        flex flex-col gap-5
+                        items-center justify-between
+                        py-6 px-10
+                        md:flex-row md:h-20
+                        transition-all duration-300">
+
+                    <img src="./assets/logo.png" class="h-14 w-auto object-contain bg-white/10 rounded p-1" alt="Logo">
+
+                    <div class="text-white flex gap-10 order-1 md:order-0 font-medium">
+                        <a href="#" class="hover:text-amber-400">Inicio</a>
+                        <a href="#" class="hover:text-amber-400">Acerca de</a>
+                        <a href="#" class="hover:text-amber-400">Contacto</a>
+                    </div>
+
+                    <a href="#"
+                        class="bg-amber-700 hover:bg-amber-600 text-white px-7 py-3 rounded-lg transition-colors">Contáctame</a>
+                </nav>
+                <div class="p-2 text-sm text-gray-500 bg-gray-50 text-center">
+                    Prueba reduciendo el ancho por debajo de 768px (md)
+                </div>
+            </div>
+        </section>
+
+        <!-- SECCIÓN: Desktop-First -->
+        <section class="bg-white p-6 rounded-lg shadow-md border border-gray-200">
+            <h2 class="text-2xl font-semibold mb-4 border-b pb-2 text-gray-700">Enfoque Desktop-First (max-md:*)</h2>
+            <div class="p-4 border border-gray-100 rounded bg-gray-50/50">
+                <nav class="h-20 flex flex-row items-center justify-center bg-indigo-100 border border-indigo-200 p-4
+                        max-md:h-auto max-md:flex-col max-md:gap-4
+                        transition-all duration-300">
+                    <div class="p-2 bg-indigo-300 mx-2">Item 1</div>
+                    <div class="p-2 bg-indigo-300 mx-2">Item 2</div>
+                    <div class="p-2 bg-indigo-300 mx-2">Item 3</div>
+                    <!-- 
+                        - Por defecto (desktop): altura 20, fila horizontal
+                        - Pantallas <768px: altura auto, columna vertical
+                    -->
+                </nav>
+            </div>
+        </section>
+
+        <!-- SECCIÓN: Combinar Breakpoints -->
+        <section class="bg-white p-6 rounded-lg shadow-md border border-gray-200">
+            <h2 class="text-2xl font-semibold mb-4 border-b pb-2 text-gray-700">Combinar Breakpoints: Rangos</h2>
+            <!-- Note: The user's code for this section was identical to the previous one in structure. I will replicate it but maybe add a visual distinction. -->
+            <div class="p-4 border border-gray-100 rounded bg-gray-50/50">
+                <nav class="h-20 flex flex-row items-center justify-center bg-pink-100 border border-pink-200 p-4
+                        max-md:h-auto max-md:flex-col max-md:gap-4
+                        lg:bg-pink-300">
+                    <div class="p-2 bg-pink-400/50 mx-2">Rango Demo</div>
+                </nav>
+            </div>
+        </section>
+
+        <!-- SECCIÓN: Visualización Condicional (Ranges) -->
+        <section class="bg-white p-6 rounded-lg shadow-md border border-gray-200">
+            <h2 class="text-2xl font-semibold mb-4 border-b pb-2 text-gray-700">Breakpoints: Cajas de Color</h2>
+
+            <div class="space-y-4">
+                <!-- Solo en móviles grandes y tablets -->
+                <div class="p-4 bg-gray-100 rounded border text-center font-mono text-sm">
+                    <span class="sm:max-md:text-2xl sm:max-md:text-red-600 font-bold transition-all">
+                        Texto Grande (Solo sm -> max-md)
+                    </span>
+                    <p class="text-xs text-gray-500 mt-1">Este texto crece solo entre 640px y 768px</p>
+                </div>
+
+                <!-- Solo en laptops -->
+                <div class="lg:max-xl:px-20 bg-yellow-50 border border-yellow-200 p-4 transition-all duration-300">
+                    <p class="text-center font-medium">Padding Extra (Solo lg -> max-xl)</p>
+                    <p class="text-xs text-center text-gray-500 mt-1">Este contenedor gana padding horizontal enorme
+                        entre 1024px y 1280px</p>
+                </div>
+
+                <div class="w-full flex justify-center mt-6">
+                    <div class="
+                        w-full p-4 bg-blue-500
+                        sm:w-3/4 sm:p-6 sm:bg-green-500
+                        md:w-1/2 md:p-8 md:bg-yellow-500
+                        lg:w-1/3 lg:p-10 lg:bg-red-500
+                        text-white rounded-lg shadow-lg text-center transition-all duration-500
+                    ">
+                        <h2 class="text-xl md:text-3xl lg:text-5xl font-bold">
+                            Caja Mutante
+                        </h2>
+                        <p class="mt-2 text-sm opacity-90">Cambio de ancho, color y padding</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </div>
+</body>
+
+</html>

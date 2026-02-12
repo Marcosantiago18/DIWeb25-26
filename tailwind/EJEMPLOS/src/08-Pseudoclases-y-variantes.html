@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pseudoclases y Variantes</title>
+    <link rel="stylesheet" href="./css/estilos.css">
+</head>
+
+<body class="bg-gray-50 text-gray-800">
+
+    <div class="container mx-auto p-6 space-y-10">
+        <h1 class="text-4xl font-bold text-center text-blue-600 mb-10">Ejemplos de Pseudoclases y Variantes</h1>
+
+        <!-- SECCIÓN: Pseudoclases Básicas -->
+        <section class="bg-white p-6 rounded-lg shadow-md border border-gray-200">
+            <h2 class="text-2xl font-semibold mb-6 border-b pb-2 text-gray-700">Pseudoclases Básicas</h2>
+
+            <div class="space-y-6">
+                <!-- hover -->
+                <div class="p-4 border border-gray-100 rounded bg-gray-50">
+                    <h3 class="font-medium mb-2 text-sm text-gray-500 uppercase">Hover</h3>
+                    <button class="bg-blue-500 hover:bg-blue-700 text-white px-4 py-2 rounded">
+                        <!-- Fondo azul por defecto, azul oscuro al pasar el ratón -->
+                        Pasa el ratón
+                    </button>
+                </div>
+
+                <!-- focus: - Al enfocar el elemento -->
+                <div class="p-4 border border-gray-100 rounded bg-gray-50">
+                    <h3 class="font-medium mb-2 text-sm text-gray-500 uppercase">Focus</h3>
+                    <input type="text" placeholder="Enter your name" class="border border-gray-300 rounded-md py-2 px-4
+                            focus:outline-blue-500 focus:border-blue-500">
+                    <!-- El outline y el borde cambian a azul al hacer clic en el input -->
+                </div>
+
+                <!-- active: - Al hacer clic -->
+                <div class="p-4 border border-gray-100 rounded bg-gray-50">
+                    <h3 class="font-medium mb-2 text-sm text-gray-500 uppercase">Active</h3>
+                    <button class="bg-green-500 active:bg-green-800 text-white px-4 py-2 rounded">
+                        Presióname
+                    </button>
+                </div>
+
+                <!-- disabled: - Cuando está deshabilitado -->
+                <div class="p-4 border border-gray-100 rounded bg-gray-50">
+                    <h3 class="font-medium mb-2 text-sm text-gray-500 uppercase">Disabled</h3>
+                    <button disabled
+                        class="bg-blue-500 disabled:bg-gray-400 disabled:cursor-not-allowed text-white px-4 py-2 rounded">
+                        Botón deshabilitado
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECCIÓN: Combinando Variantes -->
+        <section class="bg-white p-6 rounded-lg shadow-md border border-gray-200">
+            <h2 class="text-2xl font-semibold mb-6 border-b pb-2 text-gray-700">Combinando Variantes</h2>
+            <div class="p-4 border border-gray-100 rounded bg-gray-50">
+                <button class="bg-purple-600 px-4 py-2 rounded text-white
+                        hover:bg-purple-400 
+                        hover:text-black
+                        active:bg-purple-900
+                        focus:outline-purple-500">
+                    Botón interactivo
+                </button>
+            </div>
+        </section>
+
+        <!-- SECCIÓN: Group (Observar el Padre) -->
+        <section class="bg-white p-6 rounded-lg shadow-md border border-gray-200">
+            <h2 class="text-2xl font-semibold mb-6 border-b pb-2 text-gray-700">Group: Observar el Padre</h2>
+
+            <div class="space-y-6">
+                <!-- Group básico -->
+                <div class="p-4 border border-gray-100 rounded bg-gray-50">
+                    <h3 class="font-medium mb-2 text-sm text-gray-500 uppercase">Group Hover</h3>
+                    <!-- Corrigiendo <body href="#"> a <a href="#"> -->
+                    <a href="#"
+                        class="group bg-purple-600 hover:bg-purple-400 px-6 py-3 rounded-lg flex items-center gap-2 w-fit">
+                        <!-- Icono SVG -->
+                        <svg class="fill-white group-hover:fill-black transition-colors" width="20" height="20">
+                            <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z" />
+                        </svg>
+
+                        <!-- Texto -->
+                        <span class="text-white group-hover:text-black transition-colors">
+                            Contáctame
+                        </span>
+                    </a>
+                </div>
+
+                <!-- Group con Nombres: Múltiples Niveles -->
+                <div class="p-4 border border-gray-100 rounded bg-gray-50">
+                    <h3 class="font-medium mb-2 text-sm text-gray-500 uppercase">Group con Nombres</h3>
+                    <a href="#"
+                        class="group/link bg-purple-600 hover:bg-purple-400 px-6 py-3 rounded-lg flex items-center gap-2 w-fit">
+                        <svg class="fill-white group-hover/link:fill-black transaction-colors" width="20" height="20">
+                            <!-- Observa específicamente al grupo "link" -->
+                            <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z" />
+                        </svg>
+
+                        <span class="text-white group-hover/link:text-black transition-colors">
+                            Contáctame
+                        </span>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECCIÓN: Figure Hover Effect -->
+        <section class="bg-white p-6 rounded-lg shadow-md border border-gray-200">
+            <h2 class="text-2xl font-semibold mb-6 border-b pb-2 text-gray-700">Figure Hover Effect</h2>
+            <figure class="w-full max-w-md rounded-3xl mx-auto relative overflow-hidden group/figure shadow-xl">
+                <!-- Imagen -->
+                <img src="assets/mountain_landscape.png" alt="Workspace de desarrollo con Tailwind CSS" class="rounded-[inherit] w-full object-cover
+                            group-hover/figure:scale-150
+                            group-hover/figure:rotate-6
+                            transition-transform duration-700">
+
+                <!-- Overlay (capa que aparece) -->
+                <div class="absolute w-full h-full bg-purple-900/70
+                            rounded-[inherit] flex items-center justify-center
+                            top-0
+                            translate-y-full
+                            group-hover/figure:translate-y-0
+                            transition-transform duration-500">
+                    <h3 class="text-white text-3xl font-bold">
+                        ¡Aprende Tailwind!
+                    </h3>
+                </div>
+            </figure>
+        </section>
+
+        <!-- SECCIÓN: Form Inputs (Peer) -->
+        <section class="bg-white p-6 rounded-lg shadow-md border border-gray-200">
+            <h2 class="text-2xl font-semibold mb-6 border-b pb-2 text-gray-700">Peer: Float Label</h2>
+            <!-- Ejemplo Práctico: Float Label -->
+            <div class="relative w-full max-w-sm mx-auto mt-8">
+                <!-- Input marcado como peer -->
+                <input type="text" id="name" placeholder=" " class="w-full border-b border-zinc-600 p-2 px-4
+                            focus:border-blue-600 focus:outline-none
+                            peer bg-transparent">
+                <!-- Note: placeholder=" " trick often used for peer-placeholder-shown, but logic here relies on focus -->
+
+                <!-- Label que observa al peer -->
+                <label for="name" class="absolute left-4 -top-5 text-sm text-blue-600
+                            opacity-0 peer-focus:opacity-100
+                            transition-opacity duration-200">
+                    Ingresa tu nombre
+                </label>
+                <span
+                    class="absolute left-4 top-2 text-gray-400 pointer-events-none peer-focus:opacity-0 transition-opacity">Ingresa
+                    tu nombre...</span>
+            </div>
+        </section>
+
+        <!-- SECCIÓN: Ejemplo Completo -->
+        <section class="bg-white p-6 rounded-lg shadow-md border border-gray-200">
+            <h2 class="text-2xl font-semibold mb-6 border-b pb-2 text-gray-700">Ejemplo Completo: Botón con Icono</h2>
+            <div class="flex justify-center">
+                <a href="#" class="group/link 
+                            bg-purple-600 hover:bg-purple-400 
+                            text-white
+                            px-6 py-3 rounded-lg
+                            flex items-center gap-2
+                            transition-colors duration-300">
+                    <!-- Icono de sobre (envelope) -->
+                    <svg class="fill-white group-hover/link:fill-black transition-colors" width="20" height="20"
+                        viewBox="0 0 24 24">
+                        <path
+                            d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z" />
+                    </svg>
+
+                    <!-- Texto -->
+                    <span class="group-hover/link:text-black transition-colors">
+                        Contáctame
+                    </span>
+                </a>
+            </div>
+        </section>
+
+    </div>
+
+</body>
+
+</html>
